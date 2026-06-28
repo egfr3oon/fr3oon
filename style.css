@@ -1,0 +1,1577 @@
+/* ===========================
+Google Font
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+Reset
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#0d0d0d;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#d4af37;
+
+    border-radius:20px;
+
+}
+
+/* ===========================
+Loader
+=========================== */
+
+#loader{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    z-index:9999;
+
+    background: #000;
+
+    opacity:1;
+transform:scale(1);
+}
+
+.left-door,
+.right-door{
+
+    position:absolute;
+
+    top:0;
+
+    width:50%;
+
+    height:100%;
+
+    transition:2.4s cubic-bezier(0.77,0,0.175,1);
+
+    background-repeat:no-repeat;
+
+    background-size:100% 100%;
+
+    z-index:2;
+
+}
+
+/* نقوش فرعونية */
+
+.left-door::before,
+
+.right-door::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.18;
+
+    background-image:
+    linear-gradient(90deg,transparent 48%,rgba(212,175,55,.35) 50%,transparent 52%),
+    linear-gradient(transparent 48%,rgba(212,175,55,.35) 50%,transparent 52%);
+
+    background-size:70px 70px;
+
+}
+
+.left-door{
+
+    left:0;
+
+    background-image:url("images/gate-left.png");
+
+}
+
+.right-door{
+
+    right:0;
+
+    background-image:url("images/gate-right.png");
+
+}
+
+.center-logo{
+
+    position:relative;
+
+    z-index:10000;
+
+    text-align:center;
+
+}
+
+.center-logo h1{
+
+    font-size:70px;
+
+    font-family:'Cinzel',serif;
+
+    color:#d4af37;
+
+    letter-spacing:6px;
+
+    text-shadow:0 0 25px #d4af37;
+
+}
+
+.center-logo p{
+
+    margin-top:20px;
+
+    color:white;
+
+    letter-spacing:3px;
+
+    opacity:.85;
+
+}
+
+/* ===========================
+Website
+=========================== */
+
+#website{
+
+    display:none;
+
+}
+
+/* ===========================
+Hero
+=========================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+}
+
+/* الخلفية */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:url("images/temple.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    filter:brightness(.45);
+
+    z-index:-2;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:-1;
+
+}
+
+.hero-content{
+
+    padding:20px;
+
+}
+
+.profile{
+
+    width:190px;
+
+    height:190px;
+
+    border-radius:50%;
+
+    border:4px solid #d4af37;
+
+    object-fit:cover;
+
+    box-shadow:0 0 35px #d4af37;
+
+    margin-bottom:25px;
+
+    transition: transform .35s ease, box-shadow .35s ease;
+cursor: pointer;
+
+}
+
+.profile.active{
+
+    transform:scale(1.05);
+
+    box-shadow:
+    0 0 20px #d4af37,
+    0 0 40px #d4af37,
+    0 0 70px rgba(212,175,55,.6);
+
+}
+
+.hero h1{
+
+    font-size:75px;
+
+    font-family:'Cinzel',serif;
+
+    color:#d4af37;
+
+    letter-spacing:6px;
+
+}
+
+.subtitle{
+
+    margin-top:15px;
+
+    font-size:22px;
+
+    color:#ddd;
+
+}
+
+/* ===========================
+Announcement (الخلفية البيج الفرعونية)
+=========================== */
+
+.announcement {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #f4ebd0; /* اللون البيج الفرعوني الملكي */
+}
+
+.announcement-box {
+    width: 90%;
+    max-width: 900px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.04); /* تغميق خفيف جداً عشان الصندوق يبان وسط البيج */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(143, 106, 0, 0.2); /* حدود بني ذهبي هادي */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.announcement h2 {
+    font-family: 'Cinzel', serif;
+    color: #8f6a00; /* لون بني ذهبي غامق واضح */
+    margin-bottom: 20px;
+    font-size: 34px;
+}
+
+.announcement-box p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #1a1a1a; /* قلبنا الخط للأسود الداكن عشان يتقرأ بوضوح فوق البيج */
+}
+
+/* ===========================
+Social
+=========================== */
+
+.social{
+
+    padding:90px 20px;
+
+}
+
+.social h2{
+
+    text-align:center;
+
+    color:#d4af37;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:45px;
+
+    font-size:40px;
+
+}
+
+.social-grid{
+
+    max-width:850px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.social-grid a{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(212,175,55,.25);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.social-grid a i{
+
+    color:#d4af37;
+
+    margin-right:10px;
+
+    font-size:22px;
+
+}
+
+.social-grid a:hover{
+
+    transform:translateY(-6px);
+
+    background:rgba(212,175,55,.12);
+
+    border-color:#d4af37;
+
+    box-shadow:0 0 25px rgba(212,175,55,.45);
+
+}
+
+/* ===========================
+Section Title
+=========================== */
+
+section h2{
+
+    letter-spacing:2px;
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.social-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:52px;
+
+}
+
+.profile{
+
+width:150px;
+
+height:150px;
+
+}
+
+}
+
+/* ===========================
+Featured Clips (الخلفية البيج الفرعونية)
+=========================== */
+
+.clips {
+    padding: 90px 20px;
+    background-color: #443917; /* مكملين بالبيج الملكي */
+}
+
+.clips h2 {
+    text-align: center;
+    font-size: 42px;
+    color: #8f6a00; /* بني ذهبي غامق واضح فوق البيج */
+    font-family: 'Cinzel', serif;
+    margin-bottom: 50px;
+}
+
+.clips-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.clip-card {
+    background: rgba(0, 0, 0, 0.04); /* خلفية داكنة خفيفة جداً للكروت عشان تبان */
+    border: 1px solid rgba(143, 106, 0, 0.2); /* حدود متناسقة */
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    transition: .35s;
+}
+
+.clip-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 30px rgba(212,175,55,.35);
+
+}
+
+.clip-card iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+}
+
+/* ===========================
+Featured Video
+=========================== */
+
+.featured-video{
+
+    padding:90px 20px;
+
+}
+
+.featured-video h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    color:#d4af37;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:45px;
+
+}
+
+.featured-video-box{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(212,175,55,.3);
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+}
+
+.featured-video-box iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+}
+
+/* زر Kick بعرض الصف بالكامل */
+
+.social-grid a:last-child{
+
+    grid-column:1 / -1;
+
+    max-width:350px;
+
+    width:100%;
+
+    justify-self:center;
+
+}
+
+/* ===========================
+Statistics
+=========================== */
+
+.stats{
+
+    padding:90px 20px;
+
+}
+
+.stats h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-family:'Cinzel',serif;
+
+    color:#d4af37;
+
+    margin-bottom:55px;
+
+}
+
+.stats-grid{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(212,175,55,.25);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#d4af37;
+
+    box-shadow:0 0 30px rgba(212,175,55,.4);
+
+}
+
+.stat-card h3{
+
+    font-size:42px;
+
+    color:#d4af37;
+
+    margin-bottom:15px;
+
+    font-family:'Cinzel',serif;
+
+}
+
+.stat-card p{
+
+    color:#ddd;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+Footer
+=========================== */
+
+footer{
+
+    margin-top:90px;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(212,175,55,.2);
+
+    background:rgba(255,255,255,.03);
+
+}
+
+footer p{
+
+    color:#bbb;
+
+    margin:8px 0;
+
+    letter-spacing:1px;
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.stat-card{
+
+padding:28px;
+
+}
+
+.stat-card h3{
+
+font-size:34px;
+
+}
+
+}
+
+/* ===========================
+Animations
+=========================== */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:all .8s ease;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===========================
+Buttons Glow
+=========================== */
+
+.social-grid a{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.social-grid a::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(212,175,55,.25),
+        transparent
+    );
+
+    transition:.6s;
+
+}
+
+.social-grid a:hover::before{
+
+    left:100%;
+
+}
+
+/* ===========================
+Golden Glow Animation
+=========================== */
+
+@keyframes glow{
+
+    0%{
+
+        box-shadow:0 0 5px rgba(212,175,55,.2);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 20px rgba(212,175,55,.6),
+        0 0 40px rgba(212,175,55,.35);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 5px rgba(212,175,55,.2);
+
+    }
+
+}
+
+.profile{
+
+    animation:glow 3s infinite;
+
+}
+
+/* ===========================
+Floating Effect
+=========================== */
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+.profile{
+
+    animation:floating 5s ease-in-out infinite,
+              glow 3s infinite;
+
+}
+
+/* ===========================
+Section Hover
+=========================== */
+
+.announcement-box,
+.clip-card,
+.featured-video-box,
+.stat-card{
+
+    transition:.35s;
+
+}
+
+.announcement-box:hover,
+.featured-video-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 35px rgba(212,175,55,.25);
+
+}
+
+/* ===========================
+Moving Sand Effect
+=========================== */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.08;
+
+    background-image:
+    radial-gradient(circle,#d4af37 1px,transparent 1px);
+
+    background-size:35px 35px;
+
+    animation:sandMove 18s linear infinite;
+
+}
+
+@keyframes sandMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(120px);
+
+    }
+
+}
+
+/* ===========================
+Background Glow
+=========================== */
+
+.hero::before{
+
+    animation:heroZoom 18s ease-in-out infinite alternate;
+
+}
+
+@keyframes heroZoom{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+/* ===========================
+Text Glow
+=========================== */
+
+.hero h1{
+
+    text-shadow:
+    0 0 10px rgba(212,175,55,.5),
+    0 0 20px rgba(212,175,55,.4),
+    0 0 45px rgba(212,175,55,.25);
+
+}
+
+.subtitle{
+
+    text-shadow:0 0 10px rgba(255,255,255,.2);
+
+}
+
+/* ===========================
+Smooth Sections
+=========================== */
+
+section{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ===========================
+Hover Effects
+=========================== */
+
+.clip-card:hover iframe,
+
+.featured-video-box:hover iframe{
+
+    transform:scale(1.03);
+
+    transition:.4s;
+
+}
+
+/* ===========================
+Footer Glow
+=========================== */
+
+footer{
+
+    box-shadow:0 -10px 40px rgba(212,175,55,.08);
+
+}
+
+/* ===========================
+Selection
+=========================== */
+
+::selection{
+
+    background:#d4af37;
+
+    color:#000;
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:600px){
+
+.hero h1{
+
+font-size:42px;
+
+letter-spacing:2px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+}
+
+.center-logo h1{
+
+font-size:42px;
+
+}
+
+.social-grid{
+
+gap:18px;
+
+}
+
+.clips-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* ===========================
+Social Icons Colors
+=========================== */
+
+/*.fa-youtube{
+
+    color:#FF0000;
+
+}
+
+.fa-discord{
+
+    color:#5865F2;
+
+}
+
+.fa-twitch{
+
+    color:#9146FF;
+
+}
+
+.fa-instagram{
+
+    color:#E4405F;
+
+}
+
+.fa-tiktok{
+
+    color:#ffffff;
+
+}
+
+.fa-x-twitter{
+
+    color:#ffffff;
+
+}
+
+.fa-kickstarter-k{
+
+    color:#53FC18;
+
+}*/
+
+.social-grid a .fa-youtube{
+    color:#FF0000 !important;
+}
+
+.social-grid a .fa-discord{
+    color:#5865F2 !important;
+}
+
+.social-grid a .fa-twitch{
+    color:#9146FF !important;
+}
+
+.social-grid a .fa-instagram{
+    color:#E4405F !important;
+}
+
+.social-grid a .fa-tiktok{
+    color:#ffffff !important;
+}
+
+.social-grid a .fa-x-twitter{
+    color:#ffffff !important;
+}
+
+/* ===========================
+Golden Sand
+=========================== */
+
+.sand{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.sand::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:200%;
+
+    height:200%;
+
+    background-image:
+    radial-gradient(#d4af37 1px,transparent 1px);
+
+    background-size:40px 40px;
+
+    opacity:.18;
+
+    animation:sandFloat 25s linear infinite;
+
+}
+
+@keyframes sandFloat{
+
+    0%{
+
+        transform:translate(-10%,-10%);
+
+    }
+
+    100%{
+
+        transform:translate(10%,10%);
+
+    }
+
+}
+
+/* ===========================
+Mouse Sand
+=========================== */
+
+/*.particle{
+
+    position:fixed;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    background:radial-gradient(circle,#ffd54f,#d4af37,transparent);
+
+    box-shadow:0 0 10px #d4af37;
+
+    animation:particleFloat .8s linear forwards;
+
+    z-index:99999;
+
+}
+
+@keyframes particleFloat{
+
+    0%{
+
+        opacity:1;
+
+        transform:translate(0,0) scale(1);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        translate(
+        var(--x),
+        var(--y)
+        )
+        scale(.2);
+
+    }
+
+}*/
+
+/* ===========================
+Logo Magic Dust
+=========================== */
+
+.magic-particle{
+
+    position:fixed;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    background:radial-gradient(circle,#ffe27a,#d4af37,#8f6a00);
+
+    box-shadow:
+    0 0 8px #ffd54f,
+    0 0 18px rgba(212,175,55,.8);
+
+    opacity:1;
+
+    z-index:99999;
+
+    animation:magicDust 1.1s ease-out forwards;
+
+}
+
+@keyframes magicDust{
+
+    0%{
+
+        opacity:1;
+
+        transform:translate(0,0) scale(.3);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:
+        translate(var(--x),var(--y))
+        scale(1);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        translate(var(--x2),var(--y2))
+        scale(.2);
+
+    }
+
+}
+
+ /* ===================================================
+   Logo Diagonal Light Shine Effect (اللمعة المايلة بس)
+=================================================== */
+.profile {
+    position: relative;
+    overflow: hidden; /* ضروري جداً عشان اللمعة م تطلعش برة الدائرة بتاعة الصورة */
+}
+
+/* تجهيز طبقة اللمعة المايلة الشفافة الفخمة */
+.profile::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 60%;
+    height: 200%;
+    background: linear-gradient(
+        120deg, 
+        transparent, 
+        rgba(212, 175, 55, 0.25), /* وميض ذهبي خفيف لايق على التيم */
+        rgba(255, 255, 255, 0.6),  /* لمعة بيضاء منورة في النص */
+        rgba(212, 175, 55, 0.25), 
+        transparent
+    );
+    transform: rotate(45deg); /* جعل الخط مائل بزاوية 45 درجة */
+    transition: 0s;
+    pointer-events: none;
+}
+
+/* تشغيل حركة اللمعة الانسيابية عند الـ Hover */
+.profile:hover::after,
+.profile.active::after {
+    animation: logoShineEffectOnly 0.75s ease-out forwards;
+}
+
+@keyframes logoShineEffectOnly {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+/* ===================================================
+   Levi7 Creator Credit Link Style
+=================================================== */
+.levi7-credit {
+    color: #ffffff !important;   /* الحفاظ على اللون الأبيض الصريح */
+    text-decoration: none;       /* إخفاء الخط اللي تحت الكلمة تماماً */
+    transition: text-decoration 0.2s ease, opacity 0.2s ease;
+}
+
+.levi7-credit:hover {
+    text-decoration: underline;  /* إظهار الخط فقط عند الوقوف بالماوس */
+    opacity: 0.85;               /* لمسة خفيفة لتغيير الإضاءة تحسس الزائر إنه زرار قابل للضغط */
+}
+
+/* =================================================== */
+/* Pharaoh Epic Footer Custom Styles - By Levi */
+/* =================================================== */
+.pharaoh-footer {
+    background-color: #0a0a0a; /* خلفية سوداء فخمة */
+    border-top: 1px solid rgba(212, 175, 55, 0.15); /* خط علوي ذهبي خفيف جداً */
+    padding: 60px 20px 30px 20px;
+    font-family: sans-serif;
+    color: #ffffff;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+/* شاشات الكمبيوتر: نقلب التوزيعة بالعرض */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+}
+
+/* القسم الأيسر للبراند */
+.footer-brand-section {
+    max-width: 380px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+}
+
+.footer-icon-gold {
+    color: #d4af37; /* اللون الذهبي */
+    width: 28px;
+    height: 28px;
+}
+
+.gold-dot {
+    color: #d4af37;
+}
+
+.footer-bio-arabic {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 16px;
+    line-height: 1.6;
+}
+
+.footer-bio-english {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.footer-social-links {
+    display: flex;
+    flex-wrap: wrap;        /* عشان يسمح بنزول الأزرار الزيادة تحت */
+    justify-content: center; /* السحر كله هنا: بيوسط الـ 3 أزرار اللي تحت في النص بالظبط */
+    gap: 12px;              /* المسافة بين كل زرار والتاني */
+    margin-top: 16px;
+    max-width: 200px;       /* العرض المثالي اللي يثبت 4 فوق والـ 3 الباقيين ينزلوا تحت */
+}
+
+.social-btn {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: rgba(212, 175, 55, 0.1); /* خلفية ذهبية شفافة جداً */
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.social-btn:hover {
+    background-color: #d4af37; /* تقلب ذهبي صريح عند الـ Hover */
+    color: #000000; /* الأيقونة تقلب سوداء لعكس التباين */
+}
+
+/* شبكة التنقل (الروابط) */
+   .footer-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 32px;
+}
+
+@media (min-width: 768px) {
+    .footer-nav-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 أعمدة على الكمبيوتر */
+        gap: 0 48px;
+    }
+}
+
+.footer-nav-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #d4af37; /* العناوين بالذهبي الفاخر */
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff; /* تفتت اللينكات للأبيض الصريح عند الـ Hover */
+}
+
+/* سطر حقوق ليفي في الأسفل تماماً */
+.footer-bottom-credit {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.levi-credit {
+    color: #ffffff !important;   /* اللون الأبيض */
+    text-decoration: none;       /* مفيش خط */
+    font-weight: 500;
+    transition: text-decoration 0.2s ease;
+}
+
+.levi-credit:hover {
+    text-decoration: underline;  /* الخط يظهر بس لما تقف عليه */
+}
+
+/* كود حركة الشريط المتحرك المتصلح بدون أي قطمة */
+@keyframes pharaohScroll {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.pharaoh-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: pharaohScroll 25s linear infinite; /* حركة دائرية مستمرة لا تنتهي */
+}
+
+/* تحويل كلاسات  إلى CSS عادي ثابت */
+.overflow-hidden { overflow: hidden; }
+.py-3 { padding-top: 12px; padding-bottom: 12px; }
+.py-5 { padding-top: 20px; padding-bottom: 20px; }
+.relative { position: relative; }
+.z-20 { z-index: 20; }
+.w-full { width: 100%; }
+.w-max { width: max-content; }
+.flex { display: flex; }
+.items-center { align-items: center; }
+.whitespace-nowrap { white-space: nowrap; }
+.inline-flex { display: inline-flex; }
+.gap-3 { gap: 12px; }
+.px-8 { padding-left: 32px; padding-right: 32px; }
+.text-xl { font-size: 20px; }
+.text-4xl { font-size: 36px; }
+.font-semibold { font-weight: 600; }
+.font-medium { font-weight: 500; }
+.uppercase { text-transform: uppercase; }
+
+/* الألوان الأساسية */
+.bg-secondary { background-color: #1a1a1a; } /* الخلفية الغامقة للشريط */
+.text-cream { color: #f4ebd0; } /* لون النص الفاتح الكِريمي */
+.text-cream\/65 { color: rgba(244, 235, 208, 0.65); } /* لون الوصف الشفاف */
+.text-primary { color: #cca43b; } /* لون النجوم الذهبي الأصلي */
+.opacity-70 { opacity: 0.7; }
+
+/* حركة التدوير والظل والانميشن السلس بدون أي تغيير هندسي */
+.shadow-surface { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); }
+.-rotate-\[1\.5deg\] { transform: rotate(-1.5deg); }
+
+.marquee-track {
+    animation: meowlyvaScroll 25s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .-rotate-\[1\.5deg\] { transform: rotate(0deg); }
+}
+
+/* الأنميشن الصافي الموزون للمجموعتين المتطابقتين */
+@keyframes meowlyvaScroll {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
